@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1176746B1A335A6D006A0EA4"
-               BuildableName = "Draughts.app"
-               BlueprintName = "Draughts"
-               ReferencedContainer = "container:Draughts.xcodeproj">
+               BuildableName = "Checker 2 Player.app"
+               BlueprintName = "Checkers 2 Player"
+               ReferencedContainer = "container:Checkers 2 Player.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "117674841A335A6D006A0EA4"
-               BuildableName = "DraughtsTests.xctest"
-               BlueprintName = "DraughtsTests"
-               ReferencedContainer = "container:Draughts.xcodeproj">
+               BuildableName = "Checker 2 PlayerTests.xctest"
+               BlueprintName = "Checkers 2 PlayerTests"
+               ReferencedContainer = "container:Checkers 2 Player.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "117674841A335A6D006A0EA4"
-               BuildableName = "DraughtsTests.xctest"
-               BlueprintName = "DraughtsTests"
-               ReferencedContainer = "container:Draughts.xcodeproj">
+               BuildableName = "Checker 2 PlayerTests.xctest"
+               BlueprintName = "Checkers 2 PlayerTests"
+               ReferencedContainer = "container:Checkers 2 Player.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1176746B1A335A6D006A0EA4"
-            BuildableName = "Draughts.app"
-            BlueprintName = "Draughts"
-            ReferencedContainer = "container:Draughts.xcodeproj">
+            BuildableName = "Checker 2 Player.app"
+            BlueprintName = "Checkers 2 Player"
+            ReferencedContainer = "container:Checkers 2 Player.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1176746B1A335A6D006A0EA4"
-            BuildableName = "Draughts.app"
-            BlueprintName = "Draughts"
-            ReferencedContainer = "container:Draughts.xcodeproj">
+            BuildableName = "Checker 2 Player.app"
+            BlueprintName = "Checkers 2 Player"
+            ReferencedContainer = "container:Checkers 2 Player.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1176746B1A335A6D006A0EA4"
-            BuildableName = "Draughts.app"
-            BlueprintName = "Draughts"
-            ReferencedContainer = "container:Draughts.xcodeproj">
+            BuildableName = "Checker 2 Player.app"
+            BlueprintName = "Checkers 2 Player"
+            ReferencedContainer = "container:Checkers 2 Player.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

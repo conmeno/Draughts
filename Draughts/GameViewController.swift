@@ -1,5 +1,6 @@
 import SpriteKit
 import AVFoundation
+import iAd
 
 class GameViewController: UIViewController {
     var scene: GameScene!
@@ -14,8 +15,8 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let skView = self.view as SKView
+         self.canDisplayBannerAds = true
+        let skView = self.originalContentView as SKView
         skView.multipleTouchEnabled = false
         skView.showsFPS = true
         skView.ignoresSiblingOrder = true

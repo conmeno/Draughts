@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Draughts.xcodeproj">
+      location = "self:Checkers 2 Player.xcodeproj">
    </FileRef>
 </Workspace>

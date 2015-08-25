@@ -21,6 +21,7 @@
 		11EA6E9A1A351E2C00FD57AA /* move.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11EA6E991A351E2C00FD57AA /* move.wav */; };
 		11EA6E9C1A3520CB00FD57AA /* eat.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11EA6E9B1A3520CB00FD57AA /* eat.wav */; };
 		11EA6E9E1A3522C600FD57AA /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 11EA6E9D1A3522C600FD57AA /* background.mp3 */; };
+		84A6B3D71B8C5D9800426D60 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3D61B8C5D9800426D60 /* iAd.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,14 +37,14 @@
 /* Begin PBXFileReference section */
 		110852ED1A33885A0091C8C1 /* Set.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
 		110852EF1A3390640091C8C1 /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
-		1176746C1A335A6D006A0EA4 /* Draughts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Draughts.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1176746C1A335A6D006A0EA4 /* Checkers 2 Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Checkers 2 Player.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		117674701A335A6D006A0EA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		117674711A335A6D006A0EA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		117674751A335A6D006A0EA4 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		117674771A335A6D006A0EA4 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		1176747A1A335A6D006A0EA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1176747C1A335A6D006A0EA4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		117674851A335A6D006A0EA4 /* DraughtsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DraughtsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		117674851A335A6D006A0EA4 /* Checkers 2 PlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Checkers 2 PlayerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1176748A1A335A6D006A0EA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1176748B1A335A6D006A0EA4 /* DraughtsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraughtsTests.swift; sourceTree = "<group>"; };
 		1176749B1A3363A6006A0EA4 /* Assets.sketch */ = {isa = PBXFileReference; lastKnownFileType = file; path = Assets.sketch; sourceTree = "<group>"; };
@@ -54,6 +55,7 @@
 		11EA6E991A351E2C00FD57AA /* move.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = move.wav; sourceTree = "<group>"; };
 		11EA6E9B1A3520CB00FD57AA /* eat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = eat.wav; sourceTree = "<group>"; };
 		11EA6E9D1A3522C600FD57AA /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
+		84A6B3D61B8C5D9800426D60 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A6B3D71B8C5D9800426D60 /* iAd.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +80,7 @@
 		117674631A335A6D006A0EA4 = {
 			isa = PBXGroup;
 			children = (
+				84A6B3D61B8C5D9800426D60 /* iAd.framework */,
 				1176746E1A335A6D006A0EA4 /* Draughts */,
 				117674881A335A6D006A0EA4 /* DraughtsTests */,
 				1176746D1A335A6D006A0EA4 /* Products */,
@@ -86,8 +90,8 @@
 		1176746D1A335A6D006A0EA4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1176746C1A335A6D006A0EA4 /* Draughts.app */,
-				117674851A335A6D006A0EA4 /* DraughtsTests.xctest */,
+				1176746C1A335A6D006A0EA4 /* Checkers 2 Player.app */,
+				117674851A335A6D006A0EA4 /* Checkers 2 PlayerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -175,9 +179,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1176746B1A335A6D006A0EA4 /* Draughts */ = {
+		1176746B1A335A6D006A0EA4 /* Checkers 2 Player */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1176748F1A335A6D006A0EA4 /* Build configuration list for PBXNativeTarget "Draughts" */;
+			buildConfigurationList = 1176748F1A335A6D006A0EA4 /* Build configuration list for PBXNativeTarget "Checkers 2 Player" */;
 			buildPhases = (
 				117674681A335A6D006A0EA4 /* Sources */,
 				117674691A335A6D006A0EA4 /* Frameworks */,
@@ -187,14 +191,14 @@
 			);
 			dependencies = (
 			);
-			name = Draughts;
+			name = "Checkers 2 Player";
 			productName = Draughts;
-			productReference = 1176746C1A335A6D006A0EA4 /* Draughts.app */;
+			productReference = 1176746C1A335A6D006A0EA4 /* Checkers 2 Player.app */;
 			productType = "com.apple.product-type.application";
 		};
-		117674841A335A6D006A0EA4 /* DraughtsTests */ = {
+		117674841A335A6D006A0EA4 /* Checkers 2 PlayerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 117674921A335A6D006A0EA4 /* Build configuration list for PBXNativeTarget "DraughtsTests" */;
+			buildConfigurationList = 117674921A335A6D006A0EA4 /* Build configuration list for PBXNativeTarget "Checkers 2 PlayerTests" */;
 			buildPhases = (
 				117674811A335A6D006A0EA4 /* Sources */,
 				117674821A335A6D006A0EA4 /* Frameworks */,
@@ -205,9 +209,9 @@
 			dependencies = (
 				117674871A335A6D006A0EA4 /* PBXTargetDependency */,
 			);
-			name = DraughtsTests;
+			name = "Checkers 2 PlayerTests";
 			productName = DraughtsTests;
-			productReference = 117674851A335A6D006A0EA4 /* DraughtsTests.xctest */;
+			productReference = 117674851A335A6D006A0EA4 /* Checkers 2 PlayerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -221,6 +225,7 @@
 				TargetAttributes = {
 					1176746B1A335A6D006A0EA4 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 6SZC32EP3F;
 					};
 					117674841A335A6D006A0EA4 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -228,7 +233,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 117674671A335A6D006A0EA4 /* Build configuration list for PBXProject "Draughts" */;
+			buildConfigurationList = 117674671A335A6D006A0EA4 /* Build configuration list for PBXProject "Checkers 2 Player" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -241,8 +246,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1176746B1A335A6D006A0EA4 /* Draughts */,
-				117674841A335A6D006A0EA4 /* DraughtsTests */,
+				1176746B1A335A6D006A0EA4 /* Checkers 2 Player */,
+				117674841A335A6D006A0EA4 /* Checkers 2 PlayerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -298,7 +303,7 @@
 /* Begin PBXTargetDependency section */
 		117674871A335A6D006A0EA4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1176746B1A335A6D006A0EA4 /* Draughts */;
+			target = 1176746B1A335A6D006A0EA4 /* Checkers 2 Player */;
 			targetProxy = 117674861A335A6D006A0EA4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -397,10 +402,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Draughts/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Checkers 2 Player";
 			};
 			name = Debug;
 		};
@@ -409,10 +415,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Draughts/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Checkers 2 Player";
 			};
 			name = Release;
 		};
@@ -430,8 +437,8 @@
 				);
 				INFOPLIST_FILE = DraughtsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Draughts.app/Draughts";
+				PRODUCT_NAME = "Checkers 2 PlayerTests";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Checkers 2 Player.app/Checkers 2 Player";
 			};
 			name = Debug;
 		};
@@ -445,15 +452,15 @@
 				);
 				INFOPLIST_FILE = DraughtsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Draughts.app/Draughts";
+				PRODUCT_NAME = "Checkers 2 PlayerTests";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Checkers 2 Player.app/Checkers 2 Player";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		117674671A335A6D006A0EA4 /* Build configuration list for PBXProject "Draughts" */ = {
+		117674671A335A6D006A0EA4 /* Build configuration list for PBXProject "Checkers 2 Player" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1176748D1A335A6D006A0EA4 /* Debug */,
@@ -462,7 +469,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1176748F1A335A6D006A0EA4 /* Build configuration list for PBXNativeTarget "Draughts" */ = {
+		1176748F1A335A6D006A0EA4 /* Build configuration list for PBXNativeTarget "Checkers 2 Player" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				117674901A335A6D006A0EA4 /* Debug */,
@@ -471,7 +478,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		117674921A335A6D006A0EA4 /* Build configuration list for PBXNativeTarget "DraughtsTests" */ = {
+		117674921A335A6D006A0EA4 /* Build configuration list for PBXNativeTarget "Checkers 2 PlayerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				117674931A335A6D006A0EA4 /* Debug */,
