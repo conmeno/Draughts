@@ -6,7 +6,7 @@ class GameViewController: UIViewController {
     var scene: GameScene!
     var board: Board!
     lazy var backgroundMusic: AVAudioPlayer = {
-        let url = NSBundle.mainBundle().URLForResource("background", withExtension: "mp3")
+        let url = NSBundle.mainBundle().URLForResource("2", withExtension: "mp3")
         let player = AVAudioPlayer(contentsOfURL: url, error: nil)
         player.volume = 0.1
         player.numberOfLoops = -1
@@ -15,10 +15,10 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-         self.canDisplayBannerAds = true
+         //self.canDisplayBannerAds = true
         let skView = self.originalContentView as SKView
         skView.multipleTouchEnabled = false
-        skView.showsFPS = true
+        //skView.showsFPS = true
         skView.ignoresSiblingOrder = true
         
         board = Board()

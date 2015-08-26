@@ -19,17 +19,19 @@ class GameScene: SKScene {
         super.init(size: size)
         
         anchorPoint = CGPoint(x: 0.5, y: 0.5)
-
+let background1 = SKSpriteNode(imageNamed: "b3")
+        
         let background = SKSpriteNode(imageNamed: "Background")
         
         let layerPosition = CGPoint(x: -TileSide * CGFloat(NumColumns) / 2, y: -TileSide * CGFloat(NumRows) / 2)
         checkersLayer.position = layerPosition
         validTiles.position = layerPosition
-        
+        addChild(background1)
         addChild(background)
         addChild(validTiles)
         addChild(checkersLayer)
     }
+    
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         let touch = touches.anyObject() as UITouch
