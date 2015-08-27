@@ -21,8 +21,8 @@
 		11EA6E9A1A351E2C00FD57AA /* move.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11EA6E991A351E2C00FD57AA /* move.wav */; };
 		11EA6E9C1A3520CB00FD57AA /* eat.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11EA6E9B1A3520CB00FD57AA /* eat.wav */; };
 		11EA6E9E1A3522C600FD57AA /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 11EA6E9D1A3522C600FD57AA /* background.mp3 */; };
-		848DF1E41B8DB78A00361D4F /* bg1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 848DF1E31B8DB78A00361D4F /* bg1.jpg */; };
 		848DF1E61B8DB7EC00361D4F /* b3.png in Resources */ = {isa = PBXBuildFile; fileRef = 848DF1E51B8DB7EC00361D4F /* b3.png */; };
+		84A490761B8EB8CA00244465 /* vg_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A490751B8EB8CA00244465 /* vg_close.png */; };
 		84A6B3D71B8C5D9800426D60 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3D61B8C5D9800426D60 /* iAd.framework */; };
 		84A6B3F71B8DAD4F00426D60 /* 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84A6B3F61B8DAD4F00426D60 /* 2.mp3 */; };
 /* End PBXBuildFile section */
@@ -54,12 +54,11 @@
 		117674A11A33655C006A0EA4 /* Array2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array2D.swift; sourceTree = "<group>"; };
 		117674A31A3365DD006A0EA4 /* Checker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checker.swift; sourceTree = "<group>"; };
 		117674A51A33679B006A0EA4 /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
-		11D0E2D31A33A0DB006442AD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		11EA6E991A351E2C00FD57AA /* move.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = move.wav; sourceTree = "<group>"; };
 		11EA6E9B1A3520CB00FD57AA /* eat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = eat.wav; sourceTree = "<group>"; };
 		11EA6E9D1A3522C600FD57AA /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
-		848DF1E31B8DB78A00361D4F /* bg1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bg1.jpg; path = Draughts/bg1.jpg; sourceTree = "<group>"; };
 		848DF1E51B8DB7EC00361D4F /* b3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = b3.png; path = Draughts/b3.png; sourceTree = "<group>"; };
+		84A490751B8EB8CA00244465 /* vg_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vg_close.png; sourceTree = "<group>"; };
 		84A6B3D61B8C5D9800426D60 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		84A6B3F61B8DAD4F00426D60 /* 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 2.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,8 +85,8 @@
 		117674631A335A6D006A0EA4 = {
 			isa = PBXGroup;
 			children = (
+				84A490751B8EB8CA00244465 /* vg_close.png */,
 				848DF1E51B8DB7EC00361D4F /* b3.png */,
-				848DF1E31B8DB78A00361D4F /* bg1.jpg */,
 				84A6B3D61B8C5D9800426D60 /* iAd.framework */,
 				1176746E1A335A6D006A0EA4 /* Draughts */,
 				117674881A335A6D006A0EA4 /* DraughtsTests */,
@@ -125,7 +124,6 @@
 				1176747C1A335A6D006A0EA4 /* Images.xcassets */,
 				117674791A335A6D006A0EA4 /* Main.storyboard */,
 				117674701A335A6D006A0EA4 /* Info.plist */,
-				11D0E2D31A33A0DB006442AD /* README.md */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -270,7 +268,7 @@
 				11EA6E9E1A3522C600FD57AA /* background.mp3 in Resources */,
 				11EA6E9C1A3520CB00FD57AA /* eat.wav in Resources */,
 				1176747D1A335A6D006A0EA4 /* Images.xcassets in Resources */,
-				848DF1E41B8DB78A00361D4F /* bg1.jpg in Resources */,
+				84A490761B8EB8CA00244465 /* vg_close.png in Resources */,
 				84A6B3F71B8DAD4F00426D60 /* 2.mp3 in Resources */,
 				848DF1E61B8DB7EC00361D4F /* b3.png in Resources */,
 				1176747B1A335A6D006A0EA4 /* Main.storyboard in Resources */,
@@ -416,6 +414,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = Draughts/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -432,6 +431,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = Draughts/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

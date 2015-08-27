@@ -5,6 +5,51 @@ import iAd
 class GameViewController: UIViewController {
     var scene: GameScene!
     var board: Board!
+    
+    
+    
+    @IBOutlet weak var adView: UIView!
+    
+    
+    
+    @IBAction func settingClick(sender: AnyObject) {
+        adView.hidden = false
+    }
+    
+    @IBAction func CloseClick(sender: AnyObject) {
+         adView.hidden = true
+    }
+    
+    
+    @IBAction func moreGameClick(sender: AnyObject) {
+        var barsLink : String = "itms-apps://itunes.apple.com/ca/artist/phuong-thanh-nguyen/id1019089261"
+        UIApplication.sharedApplication().openURL(NSURL(string: barsLink)!)
+
+    }
+    
+    
+    @IBAction func newGameClick(sender: AnyObject) {
+        
+       
+        SetupNewGame()
+    }
+    func SetupNewGame()
+    {
+        adView.hidden = true
+        let skView = self.originalContentView as SKView
+        skView.multipleTouchEnabled = false
+        //skView.showsFPS = true
+        skView.ignoresSiblingOrder = true
+        board = Board()
+        scene = GameScene(size: skView.bounds.size)
+        scene.scaleMode = .AspectFill
+        scene.board = board
+        scene.moveHandler = handleMove
+        scene.deleteHandler = handleDelete
+        skView.presentScene(scene)
+        beginGame()
+    }
+    
     lazy var backgroundMusic: AVAudioPlayer = {
         let url = NSBundle.mainBundle().URLForResource("2", withExtension: "mp3")
         let player = AVAudioPlayer(contentsOfURL: url, error: nil)
@@ -15,23 +60,9 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-         //self.canDisplayBannerAds = true
-        let skView = self.originalContentView as SKView
-        skView.multipleTouchEnabled = false
-        //skView.showsFPS = true
-        skView.ignoresSiblingOrder = true
+        self.canDisplayBannerAds = true
+        SetupNewGame()
         
-        board = Board()
-        
-        scene = GameScene(size: skView.bounds.size)
-        scene.scaleMode = .AspectFill
-        scene.board = board
-        scene.moveHandler = handleMove
-        scene.deleteHandler = handleDelete
-        
-        skView.presentScene(scene)
-        
-        beginGame()
     }
     
     func beginGame() {

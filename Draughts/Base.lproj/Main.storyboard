@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Game View Controller-->
@@ -16,11 +17,105 @@
                     <view key="view" contentMode="scaleToFill" id="bdc-N1-crn" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dCl-0K-3Zy" userLabel="topView">
+                                <rect key="frame" x="0.0" y="100" width="600" height="450"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vl-5R-t7a">
+                                        <rect key="frame" x="543" y="7" width="42" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="42" id="RYg-Or-TGO"/>
+                                            <constraint firstAttribute="height" constant="42" id="Zhd-iL-nD3"/>
+                                        </constraints>
+                                        <state key="normal" image="vg_close.png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="CloseClick:" destination="LVB-YS-i5n" eventType="touchUpInside" id="wbU-Kz-rUW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MT6-ab-waN">
+                                        <rect key="frame" x="26" y="63" width="111" height="41"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.35901626530000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="New Game">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="newGameClick:" destination="LVB-YS-i5n" eventType="touchUpInside" id="pGo-9m-eZc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6S-TN-TDf">
+                                        <rect key="frame" x="26" y="119" width="111" height="41"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.35901626530000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="More Games">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="moreGameClick:" destination="LVB-YS-i5n" eventType="touchUpInside" id="qWA-ei-MG4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTn-8Q-awJ">
+                                        <rect key="frame" x="0.0" y="60" width="600" height="390"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Thanks for using my app.">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.92172881831548903" blue="0.85931831030493333" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="hTn-8Q-awJ" firstAttribute="leading" secondItem="dCl-0K-3Zy" secondAttribute="leading" id="3pb-O4-Zbr"/>
+                                    <constraint firstAttribute="trailing" secondItem="hTn-8Q-awJ" secondAttribute="trailing" id="AiE-kr-EXv"/>
+                                    <constraint firstAttribute="trailing" secondItem="8vl-5R-t7a" secondAttribute="trailing" constant="15" id="Cbz-zd-aIT"/>
+                                    <constraint firstItem="hTn-8Q-awJ" firstAttribute="top" secondItem="dCl-0K-3Zy" secondAttribute="top" constant="60" id="UVw-lK-vKI"/>
+                                    <constraint firstItem="8vl-5R-t7a" firstAttribute="top" secondItem="dCl-0K-3Zy" secondAttribute="top" constant="7" id="l55-Vr-vhP"/>
+                                    <constraint firstAttribute="bottom" secondItem="hTn-8Q-awJ" secondAttribute="bottom" id="ppv-nO-3Pi"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BMH-gj-D5d" userLabel="setting View">
+                                <rect key="frame" x="0.0" y="550" width="600" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OyL-De-4Na">
+                                        <rect key="frame" x="8" y="12" width="63" height="30"/>
+                                        <state key="normal" title="Setting">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="settingClick:" destination="LVB-YS-i5n" eventType="touchUpInside" id="zzg-hF-iSq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="A6R-vd-Kdf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BMH-gj-D5d" firstAttribute="leading" secondItem="bdc-N1-crn" secondAttribute="leadingMargin" constant="-16" id="Auj-vw-rsa"/>
+                            <constraint firstItem="BMH-gj-D5d" firstAttribute="top" secondItem="dCl-0K-3Zy" secondAttribute="bottom" id="En4-cw-rGb"/>
+                            <constraint firstItem="dCl-0K-3Zy" firstAttribute="leading" secondItem="bdc-N1-crn" secondAttribute="leadingMargin" constant="-16" id="FTC-pc-9oG"/>
+                            <constraint firstItem="dCl-0K-3Zy" firstAttribute="top" secondItem="PCf-gQ-wO7" secondAttribute="bottom" constant="80" id="TK7-90-W97"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dCl-0K-3Zy" secondAttribute="trailing" constant="-16" id="bA2-xe-s5h"/>
+                            <constraint firstItem="b3d-qh-BLL" firstAttribute="top" secondItem="BMH-gj-D5d" secondAttribute="bottom" id="cOc-kD-cCe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BMH-gj-D5d" secondAttribute="trailing" constant="-16" id="tXf-pq-kkA"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="adView" destination="dCl-0K-3Zy" id="xlb-ud-nNJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btX-cZ-eVz" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="vg_close.png" width="62" height="62"/>
+    </resources>
 </document>
