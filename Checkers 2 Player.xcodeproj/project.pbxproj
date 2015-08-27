@@ -20,7 +20,6 @@
 		117674A61A33679B006A0EA4 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117674A51A33679B006A0EA4 /* Board.swift */; };
 		11EA6E9A1A351E2C00FD57AA /* move.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11EA6E991A351E2C00FD57AA /* move.wav */; };
 		11EA6E9C1A3520CB00FD57AA /* eat.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11EA6E9B1A3520CB00FD57AA /* eat.wav */; };
-		11EA6E9E1A3522C600FD57AA /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 11EA6E9D1A3522C600FD57AA /* background.mp3 */; };
 		848DF1E61B8DB7EC00361D4F /* b3.png in Resources */ = {isa = PBXBuildFile; fileRef = 848DF1E51B8DB7EC00361D4F /* b3.png */; };
 		84A490761B8EB8CA00244465 /* vg_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A490751B8EB8CA00244465 /* vg_close.png */; };
 		84A6B3D71B8C5D9800426D60 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3D61B8C5D9800426D60 /* iAd.framework */; };
@@ -50,15 +49,14 @@
 		117674851A335A6D006A0EA4 /* Checkers 2 PlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Checkers 2 PlayerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1176748A1A335A6D006A0EA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1176748B1A335A6D006A0EA4 /* DraughtsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraughtsTests.swift; sourceTree = "<group>"; };
-		1176749B1A3363A6006A0EA4 /* Assets.sketch */ = {isa = PBXFileReference; lastKnownFileType = file; path = Assets.sketch; sourceTree = "<group>"; };
 		117674A11A33655C006A0EA4 /* Array2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array2D.swift; sourceTree = "<group>"; };
 		117674A31A3365DD006A0EA4 /* Checker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checker.swift; sourceTree = "<group>"; };
 		117674A51A33679B006A0EA4 /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		11EA6E991A351E2C00FD57AA /* move.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = move.wav; sourceTree = "<group>"; };
 		11EA6E9B1A3520CB00FD57AA /* eat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = eat.wav; sourceTree = "<group>"; };
-		11EA6E9D1A3522C600FD57AA /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
 		848DF1E51B8DB7EC00361D4F /* b3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = b3.png; path = Draughts/b3.png; sourceTree = "<group>"; };
 		84A490751B8EB8CA00244465 /* vg_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vg_close.png; sourceTree = "<group>"; };
+		84A490771B8EF8E400244465 /* vuonhoa-Bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "vuonhoa-Bridging-header.h"; sourceTree = "<group>"; };
 		84A6B3D61B8C5D9800426D60 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		84A6B3F61B8DAD4F00426D60 /* 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 2.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +83,7 @@
 		117674631A335A6D006A0EA4 = {
 			isa = PBXGroup;
 			children = (
+				84A490771B8EF8E400244465 /* vuonhoa-Bridging-header.h */,
 				84A490751B8EB8CA00244465 /* vg_close.png */,
 				848DF1E51B8DB7EC00361D4F /* b3.png */,
 				84A6B3D61B8C5D9800426D60 /* iAd.framework */,
@@ -120,7 +119,6 @@
 				84A6B3F61B8DAD4F00426D60 /* 2.mp3 */,
 				11EA6E981A351E2C00FD57AA /* Assets */,
 				117674711A335A6D006A0EA4 /* AppDelegate.swift */,
-				1176749B1A3363A6006A0EA4 /* Assets.sketch */,
 				1176747C1A335A6D006A0EA4 /* Images.xcassets */,
 				117674791A335A6D006A0EA4 /* Main.storyboard */,
 				117674701A335A6D006A0EA4 /* Info.plist */,
@@ -178,7 +176,6 @@
 			children = (
 				11EA6E991A351E2C00FD57AA /* move.wav */,
 				11EA6E9B1A3520CB00FD57AA /* eat.wav */,
-				11EA6E9D1A3522C600FD57AA /* background.mp3 */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -265,7 +262,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				11EA6E9A1A351E2C00FD57AA /* move.wav in Resources */,
-				11EA6E9E1A3522C600FD57AA /* background.mp3 in Resources */,
 				11EA6E9C1A3520CB00FD57AA /* eat.wav in Resources */,
 				1176747D1A335A6D006A0EA4 /* Images.xcassets in Resources */,
 				84A490761B8EB8CA00244465 /* vg_close.png in Resources */,
@@ -418,9 +414,11 @@
 				INFOPLIST_FILE = Draughts/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "Checkers 2 Player";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_OBJC_BRIDGING_HEADER = "vuonhoa-Bridging-header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -435,9 +433,11 @@
 				INFOPLIST_FILE = Draughts/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "Checkers 2 Player";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_OBJC_BRIDGING_HEADER = "vuonhoa-Bridging-header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
