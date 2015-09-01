@@ -11,7 +11,6 @@
 #import <GoogleMobileAds/GADInterstitialDelegate.h>
 #import <GoogleMobileAds/GADRequest.h>
 #import <GoogleMobileAds/GADRequestError.h>
-#import <GoogleMobileAds/GoogleMobileAdsDefines.h>
 
 /// An interstitial ad. This is a full-screen advertisement shown at natural transition points in
 /// your application such as between game levels or news stories.
@@ -77,10 +76,10 @@
 #pragma mark Deprecated
 
 /// Deprecated intializer. Use initWithAdUnitID: instead.
-- (instancetype)init GAD_DEPRECATED_MSG_ATTRIBUTE("Use initWithAdUnitID:.");
+- (instancetype)init DEPRECATED_MSG_ATTRIBUTE("Use initWithAdUnitID:.");
 
 /// Deprecated setter, use initWithAdUnitID: instead.
 - (void)setAdUnitID:(NSString *)adUnitID
-    GAD_DEPRECATED_MSG_ATTRIBUTE("Use initWithAdUnitID: instead of setting the ad unit ID.");
+    DEPRECATED_MSG_ATTRIBUTE("Use initWithAdUnitID: instead of setting the ad unit ID.");
 
 @end

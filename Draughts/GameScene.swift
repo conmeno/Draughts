@@ -19,7 +19,7 @@ class GameScene: SKScene {
         super.init(size: size)
         
         anchorPoint = CGPoint(x: 0.5, y: 0.5)
-let background1 = SKSpriteNode(imageNamed: "b3")
+let background1 = SKSpriteNode(imageNamed: "b8")
         
         let background = SKSpriteNode(imageNamed: "Background")
         

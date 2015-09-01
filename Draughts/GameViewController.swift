@@ -1,16 +1,19 @@
 import SpriteKit
 import AVFoundation
-import iAd
+ 
+import GoogleMobileAds
 
 class GameViewController: UIViewController {
     var scene: GameScene!
     var board: Board!
     
     
-    
+    var AdNumber = 1
+    var timerAd:NSTimer?
     @IBOutlet weak var adView: UIView!
     
     
+    @IBOutlet weak var admobBanner: GADBannerView!
     
     @IBAction func settingClick(sender: AnyObject) {
         adView.hidden = false
@@ -21,22 +24,52 @@ class GameViewController: UIViewController {
     }
     
     
-    @IBAction func moreGameClick(sender: AnyObject) {
-        var barsLink : String = "itms-apps://itunes.apple.com/ca/artist/phuong-thanh-nguyen/id1019089261"
-        UIApplication.sharedApplication().openURL(NSURL(string: barsLink)!)
-
+    @IBAction func ThanksClick(sender: AnyObject) {
+        
+        showAds()
     }
     
     
-    @IBAction func newGameClick(sender: AnyObject) {
+    @IBAction func moreGameClick(sender: AnyObject) {
+        var barsLink : String = "itms-apps://itunes.apple.com/ca/artist/phuong-nguyen/id1004963752"
+        UIApplication.sharedApplication().openURL(NSURL(string: barsLink)!)
+
+    }
+    func showAds()
+    {
+        Chartboost.showInterstitial("Level " + String(AdNumber))
+        AdNumber++
+        println(AdNumber)
+    }
+
+    @IBAction func AutoClick(sender: AnyObject) {
+        adView.backgroundColor = UIColor.blueColor()
         
+        
+        self.timerAd = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: "timerMethodAutoAd:", userInfo: nil, repeats: true)
+    }
+    
+    
+    
+    
+    func timerMethodAutoAd(timer:NSTimer) {
+        println("auto play")
+        adView.backgroundColor = UIColor.redColor()
+        showAds()
+        showMobilecore2()
+       
+    }
+
+    
+    @IBAction func newGameClick(sender: AnyObject) {
        
         SetupNewGame()
     }
     func SetupNewGame()
     {
         adView.hidden = true
-        let skView = self.originalContentView as SKView
+//        self.originalContentView
+        let skView = view as SKView
         skView.multipleTouchEnabled = false
         //skView.showsFPS = true
         skView.ignoresSiblingOrder = true
@@ -60,8 +93,21 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.canDisplayBannerAds = true
+        //self.canDisplayBannerAds = true
         SetupNewGame()
+        showAds()
+        
+        
+        
+        admobBanner.adUnitID = "ca-app-pub-9535461294868148/4740972913"
+        admobBanner.rootViewController = self
+        self.view.addSubview(admobBanner!)
+        var request:GADRequest = GADRequest()
+        request.testDevices = ["e8cf8abb8e5a1ce756672f571a9194b2","a9da473d5b9a9baca034c10155b648b2"]
+        admobBanner.loadRequest(request)
+        //end admob
+        
+        
         
     }
     
@@ -88,6 +134,26 @@ class GameViewController: UIViewController {
             move.checker.sprite!.zPosition = 0
         }
     }
+    
+    
+    @IBAction func MediaCoreClick(sender: AnyObject) {
+        println("show mobileCore")
+        showMobilecore2()
+        showMobilecore()
+        
+    }
+    
+    func showMobilecore()
+    {
+        
+        MobileCore.showInterstitialFromViewController(self, delegate: nil)
+    }
+    func showMobilecore2()
+    {
+        MobileCore.showStickeeFromViewController(self)
+    }
+
+    
 
     override func shouldAutorotate() -> Bool {
         return true
@@ -102,7 +168,7 @@ class GameViewController: UIViewController {
         // Release any cached data, images, etc that aren't in use.
     }
 
-    override func prefersStatusBarHidden() -> Bool {
-        return true
-    }
+//    override func prefersStatusBarHidden() -> Bool {
+//        return true
+//    }
 }

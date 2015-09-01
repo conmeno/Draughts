@@ -7,7 +7,7 @@
 //
 #import <Foundation/Foundation.h>
 #import <Chartboost/Chartboost.h>
-
+#import <MobileCore/MobileCore.h>
 #ifndef vuonhoaphatgiao_vuonhoa_Bridging_header_h
 #define vuonhoaphatgiao_vuonhoa_Bridging_header_h
 
