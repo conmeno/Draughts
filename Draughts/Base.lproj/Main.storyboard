@@ -80,17 +80,6 @@
                                             <action selector="CloseClick:" destination="LVB-YS-i5n" eventType="touchUpInside" id="wbU-Kz-rUW"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MT6-ab-waN">
-                                        <rect key="frame" x="26" y="63" width="111" height="41"/>
-                                        <color key="backgroundColor" red="1" green="0.0" blue="0.35901626530000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="New Game">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="newGameClick:" destination="LVB-YS-i5n" eventType="touchUpInside" id="pGo-9m-eZc"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEP-eE-bHq">
                                         <rect key="frame" x="0.0" y="374" width="600" height="46"/>
                                         <color key="backgroundColor" red="0.08220526780708344" green="0.62345337867736816" blue="0.391686838467313" alpha="0.67000000000000004" colorSpace="calibratedRGB"/>
@@ -113,6 +102,17 @@
                                         </state>
                                         <connections>
                                             <action selector="moreGameClick:" destination="LVB-YS-i5n" eventType="touchUpInside" id="qWA-ei-MG4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MT6-ab-waN">
+                                        <rect key="frame" x="26" y="60" width="111" height="41"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.35901626530000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="New Game">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="newGameClick:" destination="LVB-YS-i5n" eventType="touchUpInside" id="pGo-9m-eZc"/>
                                         </connections>
                                     </button>
                                 </subviews>
