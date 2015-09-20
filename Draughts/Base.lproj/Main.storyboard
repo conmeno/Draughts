@@ -9,7 +9,7 @@
         <!--Game View Controller-->
         <scene sceneID="CtS-rA-C9T">
             <objects>
-                <viewController id="LVB-YS-i5n" customClass="GameViewController" customModule="Draughts_2_Players" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="LVB-YS-i5n" customClass="GameViewController" customModule="Checkers_2_Players" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PCf-gQ-wO7"/>
                         <viewControllerLayoutGuide type="bottom" id="b3d-qh-BLL"/>
@@ -54,17 +54,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dCl-0K-3Zy" userLabel="topView">
                                 <rect key="frame" x="0.0" y="100" width="600" height="420"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTn-8Q-awJ">
-                                        <rect key="frame" x="0.0" y="60" width="600" height="360"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="Thanks for using my app.">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="ThanksClick:" destination="LVB-YS-i5n" eventType="touchUpInside" id="j5O-TB-eJp"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vl-5R-t7a">
                                         <rect key="frame" x="543" y="7" width="42" height="42"/>
                                         <constraints>
@@ -115,8 +104,19 @@
                                             <action selector="newGameClick:" destination="LVB-YS-i5n" eventType="touchUpInside" id="pGo-9m-eZc"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTn-8Q-awJ">
+                                        <rect key="frame" x="0.0" y="60" width="600" height="360"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Thanks for using my app.">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="ThanksClick:" destination="LVB-YS-i5n" eventType="touchUpInside" id="j5O-TB-eJp"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.92172881831548903" blue="0.85931831030493333" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="yEP-eE-bHq" firstAttribute="leading" secondItem="dCl-0K-3Zy" secondAttribute="leading" id="3dH-hE-7lk"/>
                                     <constraint firstItem="hTn-8Q-awJ" firstAttribute="leading" secondItem="dCl-0K-3Zy" secondAttribute="leading" id="3pb-O4-Zbr"/>

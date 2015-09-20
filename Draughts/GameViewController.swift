@@ -31,7 +31,7 @@ class GameViewController: UIViewController {
     
     
     @IBAction func moreGameClick(sender: AnyObject) {
-        var barsLink : String = "itms-apps://itunes.apple.com/ca/artist/phuong-nguyen/id1004963752"
+        var barsLink : String = "itms-apps://itunes.apple.com/developer/phuong-thanh-nguyen/id1019089261"
         UIApplication.sharedApplication().openURL(NSURL(string: barsLink)!)
 
     }
@@ -56,7 +56,7 @@ class GameViewController: UIViewController {
         println("auto play")
         adView.backgroundColor = UIColor.redColor()
         showAds()
-        showMobilecore2()
+        //showMobilecore2()
        
     }
 
@@ -99,11 +99,11 @@ class GameViewController: UIViewController {
         
         
         
-        admobBanner.adUnitID = "ca-app-pub-9535461294868148/4740972913"
+        admobBanner.adUnitID = "ca-app-pub-2839097909624465/3248220435"
         admobBanner.rootViewController = self
         self.view.addSubview(admobBanner!)
         var request:GADRequest = GADRequest()
-        request.testDevices = ["e8cf8abb8e5a1ce756672f571a9194b2","a9da473d5b9a9baca034c10155b648b2"]
+        request.testDevices = ["1fb61163457fdcd3702d747b1c36b3bc","a9da473d5b9a9baca034c10155b648b2"]
         admobBanner.loadRequest(request)
         //end admob
         
@@ -136,22 +136,22 @@ class GameViewController: UIViewController {
     }
     
     
-    @IBAction func MediaCoreClick(sender: AnyObject) {
-        println("show mobileCore")
-        showMobilecore2()
-        showMobilecore()
-        
-    }
-    
-    func showMobilecore()
-    {
-        
-        MobileCore.showInterstitialFromViewController(self, delegate: nil)
-    }
-    func showMobilecore2()
-    {
-        MobileCore.showStickeeFromViewController(self)
-    }
+//    @IBAction func MediaCoreClick(sender: AnyObject) {
+//        println("show mobileCore")
+//        showMobilecore2()
+//        showMobilecore()
+//        
+//    }
+//    
+//    func showMobilecore()
+//    {
+//        
+//        MobileCore.showInterstitialFromViewController(self, delegate: nil)
+//    }
+//    func showMobilecore2()
+//    {
+//        MobileCore.showStickeeFromViewController(self)
+//    }
 
     
 
