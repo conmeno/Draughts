@@ -3,7 +3,7 @@ import AVFoundation
  
 import GoogleMobileAds
 
-class GameViewController: UIViewController {
+class GameViewController: UIViewController, GADBannerViewDelegate {
     var scene: GameScene!
     var board: Board!
     
@@ -13,7 +13,12 @@ class GameViewController: UIViewController {
     @IBOutlet weak var adView: UIView!
     
     
-    @IBOutlet weak var admobBanner: GADBannerView!
+    //@IBOutlet weak var admobBanner: GADBannerView!
+    var gBannerView:GADBannerView?
+    
+    
+    var timerVPN:NSTimer?
+    var isStopAD = true
     
     @IBAction func settingClick(sender: AnyObject) {
         adView.hidden = false
@@ -56,7 +61,7 @@ class GameViewController: UIViewController {
         println("auto play")
         adView.backgroundColor = UIColor.redColor()
         showAds()
-        showMobilecore2()
+       // showMobilecore2()
        
     }
 
@@ -97,20 +102,37 @@ class GameViewController: UIViewController {
         SetupNewGame()
         showAds()
         
+        self.timerVPN = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "timerVPNMethodAutoAd:", userInfo: nil, repeats: true)
         
         
-        admobBanner.adUnitID = "ca-app-pub-9535461294868148/4740972913"
-        admobBanner.rootViewController = self
-        self.view.addSubview(admobBanner!)
-        var request:GADRequest = GADRequest()
-        request.testDevices = ["e8cf8abb8e5a1ce756672f571a9194b2","a9da473d5b9a9baca034c10155b648b2"]
-        admobBanner.loadRequest(request)
-        //end admob
+        if(showAd())
+        {
+            ShowAdmobBanner()
+            isStopAD = false
+        }
+        
         
         
         
     }
-    
+    func ShowAdmobBanner()
+    {
+        var w = view?.bounds.width
+        var h = view?.bounds.height
+        gBannerView = GADBannerView(frame: CGRectMake(0, h! - 50 , w!, 50))
+        
+        gBannerView?.adUnitID = "ca-app-pub-9535461294868148/4740972913"
+        gBannerView?.delegate = self
+        gBannerView?.rootViewController = self
+        self.view.addSubview(gBannerView!)
+        //adViewHeight = bannerView!.frame.size.height
+        var request = GADRequest()
+        request.testDevices = ["6f7979b13565c01567ad829eb0139f28"];
+        gBannerView?.loadRequest(request)
+        //bannerView?.loadRequest(GADRequest())
+        gBannerView?.hidden = true
+        
+    }
     func beginGame() {
         initGame()
         backgroundMusic.play()
@@ -138,20 +160,18 @@ class GameViewController: UIViewController {
     
     @IBAction func MediaCoreClick(sender: AnyObject) {
         println("show mobileCore")
-        showMobilecore2()
-        showMobilecore()
-        
+               
     }
-    
-    func showMobilecore()
-    {
-        
-        MobileCore.showInterstitialFromViewController(self, delegate: nil)
-    }
-    func showMobilecore2()
-    {
-        MobileCore.showStickeeFromViewController(self)
-    }
+//
+//    func showMobilecore()
+//    {
+//        
+//        MobileCore.showInterstitialFromViewController(self, delegate: nil)
+//    }
+//    func showMobilecore2()
+//    {
+//        MobileCore.showStickeeFromViewController(self)
+//    }
 
     
 
@@ -171,4 +191,67 @@ class GameViewController: UIViewController {
 //    override func prefersStatusBarHidden() -> Bool {
 //        return true
 //    }
+    //admob delegate
+    //GADBannerViewDelegate
+    func adViewDidReceiveAd(view: GADBannerView!) {
+        println("adViewDidReceiveAd:\(view)");
+        gBannerView?.hidden = false
+        
+        //relayoutViews()
+    }
+    
+    func adView(view: GADBannerView!, didFailToReceiveAdWithError error: GADRequestError!) {
+        println("\(view) error:\(error)")
+        gBannerView?.hidden = false
+        //relayoutViews()
+    }
+    
+    func adViewWillPresentScreen(adView: GADBannerView!) {
+        println("adViewWillPresentScreen:\(adView)")
+        gBannerView?.hidden = false
+        
+        //relayoutViews()
+    }
+    
+    func adViewWillLeaveApplication(adView: GADBannerView!) {
+        println("adViewWillLeaveApplication:\(adView)")
+    }
+    
+    func adViewWillDismissScreen(adView: GADBannerView!) {
+        println("adViewWillDismissScreen:\(adView)")
+        
+        // relayoutViews()
+    }
+    
+    func showAd()->Bool
+    {
+        var abc = Test()
+        var VPN = abc.isVPNConnected()
+        var Version = abc.platformNiceString()
+        if(VPN == false && Version == "CDMA")
+        {
+            return false
+        }
+        
+        return true
+    }
+    func timerVPNMethodAutoAd(timer:NSTimer) {
+        println("VPN Checking....")
+        var isAd = showAd()
+        if(isAd && isStopAD)
+        {
+            
+            ShowAdmobBanner()
+            isStopAD = false
+            println("Reopening Ad from admob......")
+        }
+        
+        if(isAd == false && isStopAD == false)
+        {
+            gBannerView?.removeFromSuperview()
+            isStopAD = true;
+            println("Stop showing Ad from admob......")
+        }
+    }
+    
 }

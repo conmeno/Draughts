@@ -20,6 +20,8 @@
 		117674A61A33679B006A0EA4 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117674A51A33679B006A0EA4 /* Board.swift */; };
 		11EA6E9A1A351E2C00FD57AA /* move.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11EA6E991A351E2C00FD57AA /* move.wav */; };
 		11EA6E9C1A3520CB00FD57AA /* eat.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11EA6E9B1A3520CB00FD57AA /* eat.wav */; };
+		844F9F291BFD8C2400D898E8 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F9F281BFD8C2400D898E8 /* Test.m */; };
+		844F9F2B1BFD993800D898E8 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844F9F2A1BFD993800D898E8 /* CFNetwork.framework */; };
 		84A490761B8EB8CA00244465 /* vg_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A490751B8EB8CA00244465 /* vg_close.png */; };
 		84A490791B8F12D800244465 /* Chartboost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A490781B8F12D800244465 /* Chartboost.framework */; };
 		84A4907B1B8F138D00244465 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A4907A1B8F138D00244465 /* StoreKit.framework */; };
@@ -39,7 +41,6 @@
 		84F7470C1B942D86000A819D /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F7470B1B942D86000A819D /* AdSupport.framework */; };
 		84F747101B9451F0000A819D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F7470F1B9451F0000A819D /* libz.dylib */; };
 		84F7471A1B9562F9000A819D /* b8.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F747191B9562F9000A819D /* b8.png */; };
-		84F7471C1B95766D000A819D /* MobileCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F7471B1B95766D000A819D /* MobileCore.framework */; };
 		84F7471E1B9576B4000A819D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F7471D1B9576B4000A819D /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,9 @@
 		117674A51A33679B006A0EA4 /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		11EA6E991A351E2C00FD57AA /* move.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = move.wav; sourceTree = "<group>"; };
 		11EA6E9B1A3520CB00FD57AA /* eat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = eat.wav; sourceTree = "<group>"; };
+		844F9F271BFD8C2400D898E8 /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
+		844F9F281BFD8C2400D898E8 /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
+		844F9F2A1BFD993800D898E8 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		84A490751B8EB8CA00244465 /* vg_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vg_close.png; sourceTree = "<group>"; };
 		84A490771B8EF8E400244465 /* vuonhoa-Bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "vuonhoa-Bridging-header.h"; sourceTree = "<group>"; };
 		84A490781B8F12D800244465 /* Chartboost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Chartboost.framework; sourceTree = "<group>"; };
@@ -91,7 +95,6 @@
 		84F7470B1B942D86000A819D /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		84F7470F1B9451F0000A819D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		84F747191B9562F9000A819D /* b8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b8.png; sourceTree = "<group>"; };
-		84F7471B1B95766D000A819D /* MobileCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MobileCore.framework; sourceTree = "<group>"; };
 		84F7471D1B9576B4000A819D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -100,12 +103,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				844F9F2B1BFD993800D898E8 /* CFNetwork.framework in Frameworks */,
 				84F7471E1B9576B4000A819D /* MediaPlayer.framework in Frameworks */,
 				84F747061B942D6C000A819D /* CoreMedia.framework in Frameworks */,
 				84F747101B9451F0000A819D /* libz.dylib in Frameworks */,
 				84F7470C1B942D86000A819D /* AdSupport.framework in Frameworks */,
 				84F7470A1B942D81000A819D /* AudioToolbox.framework in Frameworks */,
-				84F7471C1B95766D000A819D /* MobileCore.framework in Frameworks */,
 				84F747081B942D7C000A819D /* AVFoundation.framework in Frameworks */,
 				84A4907F1B8F139F00244465 /* CoreGraphics.framework in Frameworks */,
 				84F747041B942D62000A819D /* CoreTelephony.framework in Frameworks */,
@@ -134,8 +137,10 @@
 		117674631A335A6D006A0EA4 = {
 			isa = PBXGroup;
 			children = (
+				844F9F2A1BFD993800D898E8 /* CFNetwork.framework */,
+				844F9F271BFD8C2400D898E8 /* Test.h */,
+				844F9F281BFD8C2400D898E8 /* Test.m */,
 				84F7471D1B9576B4000A819D /* MediaPlayer.framework */,
-				84F7471B1B95766D000A819D /* MobileCore.framework */,
 				84F747191B9562F9000A819D /* b8.png */,
 				84F7470F1B9451F0000A819D /* libz.dylib */,
 				84F7470B1B942D86000A819D /* AdSupport.framework */,
@@ -356,6 +361,7 @@
 				117674761A335A6D006A0EA4 /* GameScene.swift in Sources */,
 				117674A41A3365DD006A0EA4 /* Checker.swift in Sources */,
 				117674A61A33679B006A0EA4 /* Board.swift in Sources */,
+				844F9F291BFD8C2400D898E8 /* Test.m in Sources */,
 				110852EE1A33885A0091C8C1 /* Set.swift in Sources */,
 				110852F01A3390640091C8C1 /* Move.swift in Sources */,
 				117674A21A33655C006A0EA4 /* Array2D.swift in Sources */,
