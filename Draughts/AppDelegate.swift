@@ -9,7 +9,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ChartboostDelegate {
         //Chartboost.startWithAppId("55d6ca82c909a6085e4a0176", appSignature: "bb733356ff38c9c48311d9d881844b73cd7085c5", delegate: self)
         Chartboost.startWithAppId("564d67d0da1527648b675b09", appSignature: "4867d44ee280a5d14606e70bf1366558ce89cc11", delegate: self)
         
-       Chartboost.setShouldRequestInterstitialsInFirstSession(false)
+       //Chartboost.setShouldRequestInterstitialsInFirstSession(false)
         return true
     }
 

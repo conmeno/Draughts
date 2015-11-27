@@ -121,13 +121,13 @@ class GameViewController: UIViewController,GADBannerViewDelegate {
         var h = view?.bounds.height
         gBannerView = GADBannerView(frame: CGRectMake(0, h! - 50 , w!, 50))
         
-        gBannerView?.adUnitID = "ca-app-pub-9535461294868148/4740972913"
+        gBannerView?.adUnitID = "ca-app-pub-2839097909624465/3248220435"
         gBannerView?.delegate = self
         gBannerView?.rootViewController = self
         self.view.addSubview(gBannerView!)
         //adViewHeight = bannerView!.frame.size.height
         var request = GADRequest()
-        request.testDevices = ["6f7979b13565c01567ad829eb0139f28"];
+        request.testDevices = ["e6e42421f457b68051e5f5670e23adb1"];
         gBannerView?.loadRequest(request)
         //bannerView?.loadRequest(GADRequest())
         gBannerView?.hidden = true
