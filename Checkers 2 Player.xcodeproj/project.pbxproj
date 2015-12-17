@@ -38,7 +38,6 @@
 		84F747081B942D7C000A819D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F747071B942D7C000A819D /* AVFoundation.framework */; };
 		84F7470A1B942D81000A819D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F747091B942D81000A819D /* AudioToolbox.framework */; };
 		84F7470C1B942D86000A819D /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F7470B1B942D86000A819D /* AdSupport.framework */; };
-		84F747101B9451F0000A819D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F7470F1B9451F0000A819D /* libz.dylib */; };
 		84F7471A1B9562F9000A819D /* b8.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F747191B9562F9000A819D /* b8.png */; };
 		84F7471E1B9576B4000A819D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F7471D1B9576B4000A819D /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
@@ -91,7 +90,6 @@
 		84F747071B942D7C000A819D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		84F747091B942D81000A819D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		84F7470B1B942D86000A819D /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
-		84F7470F1B9451F0000A819D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		84F747191B9562F9000A819D /* b8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b8.png; sourceTree = "<group>"; };
 		84F7471D1B9576B4000A819D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -103,7 +101,6 @@
 			files = (
 				84F7471E1B9576B4000A819D /* MediaPlayer.framework in Frameworks */,
 				84F747061B942D6C000A819D /* CoreMedia.framework in Frameworks */,
-				84F747101B9451F0000A819D /* libz.dylib in Frameworks */,
 				84F7470C1B942D86000A819D /* AdSupport.framework in Frameworks */,
 				84F7470A1B942D81000A819D /* AudioToolbox.framework in Frameworks */,
 				84F747081B942D7C000A819D /* AVFoundation.framework in Frameworks */,
@@ -138,7 +135,6 @@
 				844F9F2D1BFD9E8600D898E8 /* Test.m */,
 				84F7471D1B9576B4000A819D /* MediaPlayer.framework */,
 				84F747191B9562F9000A819D /* b8.png */,
-				84F7470F1B9451F0000A819D /* libz.dylib */,
 				84F7470B1B942D86000A819D /* AdSupport.framework */,
 				84F747091B942D81000A819D /* AudioToolbox.framework */,
 				84F747071B942D7C000A819D /* AVFoundation.framework */,
@@ -293,6 +289,8 @@
 		117674641A335A6D006A0EA4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Phuong Nguyen";
 				TargetAttributes = {
@@ -480,6 +478,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -487,7 +486,7 @@
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = Draughts/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "Checkers 2 Player";
@@ -504,6 +503,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -511,7 +511,7 @@
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = Draughts/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "Checkers 2 Player";

@@ -33,29 +33,40 @@ let background1 = SKSpriteNode(imageNamed: "b8")
     }
     
     
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-        let touch = touches.anyObject() as UITouch
-        let location = touch.locationInNode(checkersLayer)
-        
-        let (success, column, row) = convertPoint(location)
-        
-        if success {
-            if let checker = board.checkerAtColumn(column, row: row) {
-                if checker.type == board.currentType {
-                    showSelectionIndicatorForCookie(checker)
-                    moveFrom = checker
-                    validMoves = board.validMove(checker)
-                    showValidMoves(validMoves!)
+    
+    func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        for touch: AnyObject in touches {
+            let location = touch.locationInNode(self)
+            let (success, column, row) = convertPoint(location)
+            
+            if success {
+                if let checker = board.checkerAtColumn(column, row: row) {
+                    if checker.type == board.currentType {
+                        showSelectionIndicatorForCookie(checker)
+                        moveFrom = checker
+                        validMoves = board.validMove(checker)
+                        showValidMoves(validMoves!)
+                    }
+                } else if let checker = moveFrom {
+                    tryMoveToColumn(column, row: row)
+                    hideSelectionIndicator()
+                    hideValidMove()
+                    moveFrom = nil
+                    validMoves = nil
                 }
-            } else if let checker = moveFrom {
-                tryMoveToColumn(column, row: row)
-                hideSelectionIndicator()
-                hideValidMove()
-                moveFrom = nil
-                validMoves = nil
             }
+
+        
         }
     }
+    
+    
+//    func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+//        let touch = touches.anyObject() as! UITouch
+//        let location = touch.locationInNode(checkersLayer)
+//        
+//        
+//    }
     
     func showValidMoves(moves: Set<Move>) {
         validTiles.removeAllChildren()

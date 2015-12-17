@@ -1,6 +1,6 @@
 import SpriteKit
 
-enum CheckerType: Int, Printable {
+enum CheckerType: Int, CustomStringConvertible {
     case White = 0, Black
     var description: String {
         return rawValue == 0 ? "White" : "Black"
@@ -11,7 +11,7 @@ enum CheckerType: Int, Printable {
     }
 }
 
-enum CheckerRank: Int, Printable {
+enum CheckerRank: Int, CustomStringConvertible {
     case Pawn = 0, King
     var description: String {
         return rawValue == 0 ? "Pawn" : "King"
